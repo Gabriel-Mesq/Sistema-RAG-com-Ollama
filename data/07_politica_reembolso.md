@@ -13,4 +13,4 @@ Para serviços de consultoria, oferecemos reembolso de:
 
 ## Serviços em Nuvem
 
-Os serviços em nuvem são cobrados por uso e podem ser cancelados a qualquer momento. Não há reembolso para recursos já utilizados, mas a cobrança c
+Os serviços em nuvem são cobrados por uso e podem ser cancelados a qualquer momento. Não há reembolso para recursos já utilizados.

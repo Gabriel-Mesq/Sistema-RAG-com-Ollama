@@ -9,7 +9,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.docstore.document import Document
 
-from config import settings
+from app.config import settings
 
 def load_documents_from_folder(folder_path: str) -> List[Document]:
     docs = []

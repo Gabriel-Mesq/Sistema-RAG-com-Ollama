@@ -1,8 +1,8 @@
 # main.py
 
 import sys
-from ingestion import ingest_documents
-from query import query_documents
+from app.ingestion import ingest_documents
+from app.query import query_documents
 
 def print_help():
     print("\nSistema RAG com Ollama")

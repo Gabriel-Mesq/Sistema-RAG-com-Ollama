@@ -102,6 +102,7 @@ Para adicionar novos documentos ao sistema:
 - "Como funciona a política de reembolso para produtos de software?"
 - "Qual é a história da empresa?"
 - "Quem fundou a Nonsense Solver?"
+- "Qual a remuneração de um colaborador responsavel pela arquitetura de soluções e mentoria técnica?"
 
 ## Solução de Problemas
 

@@ -7,7 +7,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_ollama import OllamaLLM  # Classe atualizada
 
-from config import settings
+from app.config import settings
 
 def query_documents(query_text: str) -> str:
     # Verificar se o índice existe
