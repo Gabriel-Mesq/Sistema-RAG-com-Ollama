@@ -72,7 +72,7 @@ Há dois modos de fazer consultas:
 
 **Modo linha de comando:**
 ```bash
-python -m app.main query "Qual é a política de trabalho remoto da empresa?"
+python -m app.main query "Qual a remuneração de um colaborador responsavel pela arquitetura de soluções e mentoria técnica?"
 ```
 
 **Modo interativo:**
