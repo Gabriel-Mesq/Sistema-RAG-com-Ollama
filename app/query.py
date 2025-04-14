@@ -1,15 +1,31 @@
 # app/query.py
 
 import os
+
 from langchain_community.vectorstores import FAISS
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_ollama import OllamaLLM  # Classe atualizada
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_ollama import OllamaLLM
 
 from app.config import settings
 
+
 def query_documents(query_text: str) -> str:
+    """
+    Consulta documentos relevantes usando RAG (Retrieval Augmented Generation).
+
+    Esta função realiza uma busca por similaridade em documentos previamente
+    indexados, utilizando o texto da consulta fornecido pelo usuário,
+    e gera uma resposta baseada no contexto recuperado.
+
+    Args:
+        query_text (str): Texto da consulta do usuário.
+
+    Returns:
+        str: Resposta gerada pelo modelo de linguagem com base nos
+             documentos recuperados, ou mensagem de erro.
+    """
     # Verificar se o índice existe
     if not os.path.exists(settings.VECTOR_STORE_PATH):
         return "O índice de documentos não foi criado. Execute 'ingest' primeiro."
@@ -17,7 +33,9 @@ def query_documents(query_text: str) -> str:
     try:
         # Carregar embeddings e vectorstore
         print("🔍 Carregando modelo de embeddings...")
-        embeddings = HuggingFaceEmbeddings(model_name=settings.EMBEDDING_MODEL)
+        embeddings = HuggingFaceEmbeddings(
+            model_name=settings.EMBEDDING_MODEL
+        )
         
         print("📚 Carregando índice de documentos...")
         vectorstore = FAISS.load_local(
@@ -35,7 +53,7 @@ def query_documents(query_text: str) -> str:
         
         # Criar o modelo de linguagem
         print("🤖 Consultando modelo de linguagem...")
-        llm = OllamaLLM(model="llama3.2")  # Usando o modelo llama3.2 que você já baixou
+        llm = OllamaLLM(model="llama3.2")
         
         # Montar o prompt
         prompt = ChatPromptTemplate.from_template(

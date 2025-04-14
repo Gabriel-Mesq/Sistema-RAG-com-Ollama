@@ -17,4 +17,4 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-print("Config module loaded, settings created:", settings)
+print("Módulo de configurações executado com sucesso.")

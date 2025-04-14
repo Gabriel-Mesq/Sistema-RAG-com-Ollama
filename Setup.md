@@ -1,7 +1,5 @@
 # Tutorial de Instalação e Uso do Sistema RAG com Ollama
 
-Este guia fornecerá instruções detalhadas para instalar e utilizar o Sistema RAG (Retrieval-Augmented Generation) com Ollama.
-
 ## Pré-requisitos
 
 - Python 3.8 ou superior

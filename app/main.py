@@ -4,7 +4,11 @@ import sys
 from app.ingestion import ingest_documents
 from app.query import query_documents
 
+
 def print_help():
+    """
+    Exibe informações de ajuda do sistema, listando todos os comandos disponíveis.
+    """
     print("\nSistema RAG com Ollama")
     print("-" * 30)
     print("Comandos disponíveis:")
@@ -13,7 +17,21 @@ def print_help():
     print("  help       - Mostra esta ajuda")
     print("  exit       - Sai do programa")
 
+
 def main():
+    """
+    Função principal do sistema RAG com Ollama.
+    
+    Permite dois modos de operação:
+    1. Modo de linha de comando: processar argumentos passados via sys.argv
+    2. Modo interativo: interface de terminal para comandos contínuos
+    
+    Os comandos suportados são:
+    - ingest: para indexar documentos
+    - query: para consultar o sistema
+    - help: para exibir a ajuda
+    - exit: para sair do programa (apenas no modo interativo)
+    """
     if len(sys.argv) > 1:
         # Command line arguments mode
         command = sys.argv[1].lower()
